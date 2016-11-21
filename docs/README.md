@@ -23,13 +23,13 @@ At a minimum, this app will:
 ### Wireframes
 
 A new document has a text window and a line for the ground, maybe a few blades of grass:
-![Image of new document](/docs/images/new.png)
+![Image of new document](/docs/wireframes/new.png)
 
 User begins to type...
-![Image of document with some text](/docs/images/some_text.png)
+![Image of document with some text](/docs/wireframes/some_text.png)
 
 User has the power to build an entire world, just keep writing!
-![Image of long document](/docs/images/lots_of_text.png)
+![Image of long document](/docs/wireframes/lots_of_text.png)
 
 ### Technologies and Architecture
 
