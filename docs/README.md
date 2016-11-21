@@ -37,9 +37,11 @@ While I could use React, D3, Easel, jQuery, or even plain old vanilla JS, I want
 
 There will be at least:
 **index.html**
-**reset.scss**
-**text_editor.scss**
-**background.scss**
+**reset.scss**: reset browser defaults
+**text_editor.scss**: styling for the text editor
+**background.scss**: styling and animations for the background scenes
+**main.js**: webpack entry file, listens for DOMContentLoaded
+**word_counts.js**: logic for counting words in text box
 
 ### Implementation Timeline
 
