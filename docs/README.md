@@ -47,6 +47,7 @@ There will be at least:
 - Learn SCSS.
 - Finish setting up project directory, filetree.
 - Outline basic shape of app in index.html.
+- Setup gh-pages.
 
 **Day 2**
 - Set up text editor.
