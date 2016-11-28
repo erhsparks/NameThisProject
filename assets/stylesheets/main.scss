@@ -21,6 +21,7 @@ body {
 
 .text-box {
   width: 80%;
+  max-width: 900px;
   background: white;
   border-left: $text-box-border solid #000;
   border-right: $text-box-border solid #000;
@@ -28,6 +29,7 @@ body {
   flex-direction: column;
 
   textarea {
+    font-size: 14px;
     padding: $text-padding;
     overflow-y: scroll;
     text-decoration: none;
