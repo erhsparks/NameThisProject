@@ -1,0 +1,22 @@
+html,
+body,
+header,
+footer,
+main,
+div, span,
+section,
+ul, li,
+h1, h2,
+a, p,
+aside,
+textarea {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: sans-serif;
+  background-color: inherit;
+}
+
+html, body {
+  height: 100%;
+}

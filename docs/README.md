@@ -36,12 +36,12 @@ User has the power to build an entire world, just keep writing!
 While I could use React, D3, Easel, jQuery, or even plain old vanilla JS, I want to challenge myself to learn SCSS thoroughly, and do this project as much in CSS as I can!
 
 There will be at least:
-**index.html**
-**reset.scss**: reset browser defaults
-**text_editor.scss**: styling for the text editor
-**background.scss**: styling and animations for the background scenes
-**main.js**: webpack entry file, listens for DOMContentLoaded
-**word_counts.js**: logic for counting words in text box
+- **index.html**: html for single page app
+- **reset.scss**: reset browser defaults
+- **text_editor.scss**: styling for the text editor
+- **background.scss**: styling and animations for the background scenes
+- **main.js**: webpack entry file, listens for DOMContentLoaded
+- **word_counts.js**: logic for counting words in text box
 
 ### Implementation Timeline
 

@@ -1,0 +1,6 @@
+@import 'bar';
+
+footer {
+  @include bar;
+  border-top: 1px solid #ccc;
+}

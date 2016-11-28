@@ -1,0 +1,63 @@
+html,
+body,
+header,
+footer,
+main,
+div, span,
+section,
+ul, li,
+h1, h2,
+a, p,
+aside,
+textarea {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: sans-serif;
+  background-color: inherit; }
+
+html, body {
+  height: 100%; }
+
+header {
+  background-color: teal;
+  color: papayawhip;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc; }
+
+footer {
+  background-color: teal;
+  color: papayawhip;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ccc; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.background-world {
+  background-color: papayawhip;
+  color: darkslategray;
+  display: flex;
+  justify-content: center;
+  height: 100%; }
+
+.text-box {
+  width: 80%;
+  background: white;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  display: flex;
+  flex-direction: column; }
+  .text-box textarea {
+    padding: 5px;
+    overflow-y: scroll;
+    text-decoration: none;
+    resize: none;
+    height: 100%;
+    border: 0; }
+
+/*# sourceMappingURL=main.css.map */

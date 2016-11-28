@@ -1,0 +1,6 @@
+@import 'bar';
+
+header {
+  @include bar;
+  border-bottom: 1px solid #ccc;
+}
