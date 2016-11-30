@@ -3,5 +3,4 @@ $padding: 10px;
 
 footer {
   @include bar ($padding);
-  border-top: 1px solid #ccc;
 }
