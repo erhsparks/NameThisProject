@@ -12,7 +12,7 @@ body {
 }
 
 .background-world {
-  background-color: papayawhip;
+  background-color: whitesmoke;
   color: darkslategray;
   display: flex;
   justify-content: center;
@@ -23,8 +23,8 @@ body {
   width: 80%;
   max-width: 900px;
   background: white;
-  border-left: $text-box-border solid #000;
-  border-right: $text-box-border solid #000;
+  color: rgb(119, 119, 119);
+  box-shadow: rgb(187, 187, 187) 0px 3px 10px;
   display: flex;
   flex-direction: column;
 
@@ -36,5 +36,9 @@ body {
     resize: none;
     height: 100%;
     border: 0;
+  }
+
+  textarea:focus {
+    outline-width: thin;
   }
 }

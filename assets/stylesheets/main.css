@@ -21,14 +21,14 @@ html, body {
 
 header {
   background-color: teal;
-  color: papayawhip;
+  color: white;
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid #ccc; }
 
 footer {
   background-color: teal;
-  color: papayawhip;
+  color: white;
   padding: 10px;
   text-align: center;
   border-top: 1px solid #ccc; }
@@ -39,7 +39,7 @@ body {
   justify-content: space-between; }
 
 .background-world {
-  background-color: papayawhip;
+  background-color: whitesmoke;
   color: darkslategray;
   display: flex;
   justify-content: center;
@@ -49,8 +49,8 @@ body {
   width: 80%;
   max-width: 900px;
   background: white;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+  color: #777777;
+  box-shadow: #bbbbbb 0px 3px 10px;
   display: flex;
   flex-direction: column; }
   .text-box textarea {
@@ -61,5 +61,7 @@ body {
     resize: none;
     height: 100%;
     border: 0; }
+  .text-box textarea:focus {
+    outline-width: thin; }
 
 /*# sourceMappingURL=main.css.map */
