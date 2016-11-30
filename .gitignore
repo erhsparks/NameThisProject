@@ -2,3 +2,5 @@
 .sass-cache
 /docs/wireframes/*.xml
 *.map
+node_modules/
+bundle.js.map
