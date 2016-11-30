@@ -25,9 +25,14 @@ textarea {
   height: 100%;
 }
 
-.word-count-info {
-  justify-content: center;
-  list-style: none;
+.counter-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;;
+
+  ul {
+    list-style: none;
+  }
 
   li {
     margin: 0px 5px;

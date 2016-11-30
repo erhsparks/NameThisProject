@@ -53,14 +53,17 @@ textarea {
   justify-content: center;
   height: 100%; }
 
-.word-count-info {
-  justify-content: center;
-  list-style: none; }
-  .word-count-info li {
+.counter-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .counter-bar ul {
+    list-style: none; }
+  .counter-bar li {
     margin: 0px 5px;
     display: inline-block;
     vertical-align: middle; }
-    .word-count-info li .goal {
+    .counter-bar li .goal {
       background: white;
       width: 5em;
       height: 1em;

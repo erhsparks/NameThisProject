@@ -54,10 +54,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	(0, _jquery2.default)(function () {
-	  console.log('yup!');
+	window.$ = _jquery2.default;
 	
-	  window.$ = _jquery2.default;
+	(0, _jquery2.default)(function () {
 	  (0, _word_count.wordCounter)();
 	});
 
@@ -10308,14 +10307,21 @@
 	  var $textBox = (0, _jquery2.default)('.user-text');
 	  var numWords = void 0;
 	
-	  // change only works if click away.
-	  $textBox.change(function () {
-	    numWords = $textBox.val().match(/\s*\S+\s*/g).length;
+	  var $goalBox = (0, _jquery2.default)('.goal');
+	  var goal = void 0;
+	
+	  $textBox.on('input', function () {
+	    var words = $textBox.val().match(/\s*\S+\s*/g);
+	    numWords = words ? words.length : 0;
 	
 	    updateCount(numWords);
+	    updatePercentage(numWords, goal);
 	  });
 	
-	  percentage();
+	  $goalBox.on('input', function () {
+	    goal = $goalBox.val();
+	    updatePercentage(numWords, goal);
+	  });
 	};
 	
 	var updateCount = function updateCount(numWords) {
@@ -10323,15 +10329,15 @@
 	  $currentCount.textContent = numWords;
 	};
 	
-	var percentage = function percentage() {
-	  var $goalBox = (0, _jquery2.default)('.goal');
-	  var goal = void 0;
+	var updatePercentage = function updatePercentage(numWords, goal) {
+	  if (!numWords) numWords = 0;
+	  if (!goal) goal = 0;
 	
-	  $goalBox.change(function () {
-	    goal = $goalBox.val();
+	  var percentage = Math.floor(numWords / goal * 100);
+	  if (!percentage) percentage = 0;
 	
-	    console.log(goal);
-	  });
+	  var $percentageCount = (0, _jquery2.default)('.percentage-count')[0];
+	  $percentageCount.textContent = percentage;
 	};
 
 /***/ }
