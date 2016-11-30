@@ -52,12 +52,14 @@
 	
 	var _word_count = __webpack_require__(2);
 	
+	var _word_count2 = _interopRequireDefault(_word_count);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	window.$ = _jquery2.default;
 	
 	(0, _jquery2.default)(function () {
-	  (0, _word_count.wordCounter)();
+	  (0, _word_count2.default)();
 	});
 
 /***/ },
@@ -10295,23 +10297,50 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.wordCounter = undefined;
 	
 	var _jquery = __webpack_require__(1);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
+	var _text_box = __webpack_require__(3);
+	
+	var _text_box2 = _interopRequireDefault(_text_box);
+	
+	var _goal_box = __webpack_require__(4);
+	
+	var _goal_box2 = _interopRequireDefault(_goal_box);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var wordCounter = exports.wordCounter = function wordCounter() {
+	var wordCounter = function wordCounter() {
 	  var counts = {
 	    numWords: 0,
 	    goal: 0
 	  };
 	
-	  watchTextBox(counts);
-	  watchGoalBox(counts);
+	  (0, _text_box2.default)(counts);
+	  (0, _goal_box2.default)(counts);
 	};
+	
+	exports.default = wordCounter;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _update_display = __webpack_require__(5);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var watchTextBox = function watchTextBox(counts) {
 	  var $textBox = (0, _jquery2.default)('.user-text');
@@ -10320,26 +10349,65 @@
 	    var words = $textBox.val().match(/\s*\S+\s*/g);
 	    counts.numWords = words ? words.length : 0;
 	
-	    updateCount(counts.numWords);
-	    updatePercentage(counts.numWords, counts.goal);
+	    (0, _update_display.updateCount)(counts.numWords);
+	    (0, _update_display.updatePercentage)(counts.numWords, counts.goal);
 	  });
 	};
+	
+	exports.default = watchTextBox;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	var _update_display = __webpack_require__(5);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var watchGoalBox = function watchGoalBox(counts) {
 	  var $goalBox = (0, _jquery2.default)('.goal');
 	
-	  $goalBox.on('input', function () {
+	  $goalBox.on('input', function (e) {
 	    counts.goal = $goalBox.val();
-	    updatePercentage(counts.numWords, counts.goal);
+	    (0, _update_display.updatePercentage)(counts.numWords, counts.goal);
 	  });
 	};
 	
-	var updateCount = function updateCount(numWords) {
+	exports.default = watchGoalBox;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.updatePercentage = exports.updateCount = undefined;
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var updateCount = exports.updateCount = function updateCount(numWords) {
 	  var $currentCount = (0, _jquery2.default)('.current-count')[0];
 	  $currentCount.textContent = numWords;
 	};
 	
-	var updatePercentage = function updatePercentage(numWords, goal) {
+	var updatePercentage = exports.updatePercentage = function updatePercentage(numWords, goal) {
 	  if (!numWords) numWords = 0;
 	  if (!goal) goal = 0;
 	
