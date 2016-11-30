@@ -26,6 +26,9 @@ header {
   text-align: center;
   border-bottom: 1px solid #ccc; }
 
+.page-header {
+  font-size: 24px; }
+
 footer {
   background-color: teal;
   color: white;
@@ -38,6 +41,11 @@ body {
   flex-direction: column;
   justify-content: space-between; }
 
+textarea {
+  resize: none;
+  border: 0;
+  padding: 5px; }
+
 .background-world {
   background-color: whitesmoke;
   color: darkslategray;
@@ -45,22 +53,36 @@ body {
   justify-content: center;
   height: 100%; }
 
+.word-count-info {
+  justify-content: center;
+  list-style: none; }
+  .word-count-info li {
+    margin: 0px 5px;
+    display: inline-block;
+    vertical-align: middle; }
+    .word-count-info li .goal {
+      background: white;
+      width: 5em;
+      height: 1em;
+      text-align: center;
+      color: slateblue;
+      font-size: inherit;
+      border-radius: 5px;
+      vertical-align: middle; }
+
 .text-box {
   width: 80%;
   max-width: 900px;
   background: white;
-  color: #777777;
   box-shadow: #bbbbbb 0px 3px 10px;
   display: flex;
   flex-direction: column; }
-  .text-box textarea {
+  .text-box header {
+    font-size: 20px; }
+  .text-box .user-text {
     font-size: 14px;
-    padding: 5px;
     overflow-y: scroll;
-    text-decoration: none;
-    resize: none;
-    height: 100%;
-    border: 0; }
+    height: 100%; }
   .text-box textarea:focus {
     outline-width: thin; }
 
