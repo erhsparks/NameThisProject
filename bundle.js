@@ -10304,23 +10304,33 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var wordCounter = exports.wordCounter = function wordCounter() {
-	  var $textBox = (0, _jquery2.default)('.user-text');
-	  var numWords = void 0;
+	  var counts = {
+	    numWords: 0,
+	    goal: 0
+	  };
 	
-	  var $goalBox = (0, _jquery2.default)('.goal');
-	  var goal = void 0;
+	  watchTextBox(counts);
+	  watchGoalBox(counts);
+	};
+	
+	var watchTextBox = function watchTextBox(counts) {
+	  var $textBox = (0, _jquery2.default)('.user-text');
 	
 	  $textBox.on('input', function () {
 	    var words = $textBox.val().match(/\s*\S+\s*/g);
-	    numWords = words ? words.length : 0;
+	    counts.numWords = words ? words.length : 0;
 	
-	    updateCount(numWords);
-	    updatePercentage(numWords, goal);
+	    updateCount(counts.numWords);
+	    updatePercentage(counts.numWords, counts.goal);
 	  });
+	};
+	
+	var watchGoalBox = function watchGoalBox(counts) {
+	  var $goalBox = (0, _jquery2.default)('.goal');
 	
 	  $goalBox.on('input', function () {
-	    goal = $goalBox.val();
-	    updatePercentage(numWords, goal);
+	    counts.goal = $goalBox.val();
+	    updatePercentage(counts.numWords, counts.goal);
 	  });
 	};
 	
