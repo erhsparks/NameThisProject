@@ -1,6 +1,6 @@
-@mixin bar {
+@mixin bar ($padding) {
   background-color: teal;
   color: white;
-  padding: 10px;
+  padding: $padding;
   text-align: center;
 }

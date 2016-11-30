@@ -1,6 +1,7 @@
 @import 'bar';
+$padding: 10px;
 
 footer {
-  @include bar;
+  @include bar ($padding);
   border-top: 1px solid #ccc;
 }

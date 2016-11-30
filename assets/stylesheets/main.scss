@@ -9,6 +9,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  font-weight: 200;
 }
 
 textarea {
@@ -48,6 +50,7 @@ textarea {
       font-size: inherit;
       border-radius: 5px;
       vertical-align: middle;
+      padding: 2px 0px;
     }
   }
 }

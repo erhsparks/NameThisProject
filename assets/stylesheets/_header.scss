@@ -1,7 +1,8 @@
 @import 'bar';
+$padding: 15px;
 
 header {
-  @include bar;
+  @include bar ($padding);
   border-bottom: 1px solid #ccc;
 }
 
