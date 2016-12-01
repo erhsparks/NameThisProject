@@ -10402,7 +10402,7 @@
 	
 	var enableTextBox = function enableTextBox($textBox) {
 	  $textBox.disabled = false;
-	  $textBox.placeholder = 'Start typing!';
+	  $textBox.placeholder = 'Start typing here now!';
 	};
 	
 	var disableTextBox = function disableTextBox($textBox, reason) {
