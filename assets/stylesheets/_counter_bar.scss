@@ -1,3 +1,5 @@
+$highlight-color: #FD9C52;
+
 .counter-bar {
   display: flex;
   flex-direction: row;
@@ -17,11 +19,28 @@
       width: 5em;
       height: 1em;
       text-align: center;
-      color: slateblue;
+      color: teal;
       font-size: inherit;
       border-radius: 5px;
       vertical-align: middle;
       padding: 2px 0px;
+    }
+  }
+
+  .percentage-count {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .percentage-count,
+  .current-count {
+    color: $highlight-color;
+    font-weight: 400;
+  }
+
+  .percentage-info {
+    li:last-child {
+      margin-left: 2px;
     }
   }
 }
