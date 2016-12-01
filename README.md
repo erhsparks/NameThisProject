@@ -19,7 +19,11 @@ If a user types non-numbers or zero, that input is removed and the prompt change
 Once a valid entry is detected, such as `10` in the example below, the prompt changes one last time, text entry is enabled, and you're off!
 
 ![image of valid goal entry](assets/images/03_valid_goal.png)
+
 ![image of beginning to type](assets/images/04_beginning_to_type.png)
+
+I made the decision to have one progress bar fill in upwards while the other fills downwards so that it is very obvious when you're halfway done typing. This means that a user has positive visual feedback in their peripheral vision, but no concentration-breaking messages have to appear to break the flow of writing.
+
 ![image of more typing](assets/images/05_more_typing.png)
 
 There is no penalty for continuing past your word count goal, as I figured it would break a user's flow of concentration and they might stop typing. The word and percentage counters continue to increase, however, so that users with a hard limit may edit as desired.
