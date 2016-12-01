@@ -1,0 +1,31 @@
+$text-padding: 5px;
+
+.text-box {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  // color: rgb(119, 119, 119);
+  box-shadow: rgb(187, 187, 187) 0px 3px 10px;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    font-size: 20px;
+  }
+
+  .user-text {
+    font-size: 14px;
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  textarea {
+    resize: none;
+    border: 0;
+    padding: $text-padding;
+  }
+
+  textarea:focus {
+    outline-width: thin;
+  }
+}

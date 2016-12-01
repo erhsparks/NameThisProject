@@ -1,9 +1,9 @@
 @import 'reset';
 @import 'header';
+@import 'counter_bar';
+@import 'textbox';
+@import 'background_world';
 @import 'footer';
-
-$text-padding: 5px;
-$text-box-border: 1px;
 
 body {
   display: flex;
@@ -11,70 +11,4 @@ body {
   justify-content: space-between;
 
   font-weight: 200;
-}
-
-textarea {
-  resize: none;
-  border: 0;
-  padding: $text-padding;
-}
-
-.background-world {
-  background-color: whitesmoke;
-  color: darkslategray;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
-
-.counter-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;;
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    margin: 0px 5px;
-    display: inline-block;
-    vertical-align: middle;
-
-    .goal {
-      background: white;
-      width: 5em;
-      height: 1em;
-      text-align: center;
-      color: slateblue;
-      font-size: inherit;
-      border-radius: 5px;
-      vertical-align: middle;
-      padding: 2px 0px;
-    }
-  }
-}
-
-.text-box {
-  width: 80%;
-  max-width: 900px;
-  background: white;
-  // color: rgb(119, 119, 119);
-  box-shadow: rgb(187, 187, 187) 0px 3px 10px;
-  display: flex;
-  flex-direction: column;
-
-  header {
-    font-size: 20px;
-  }
-
-  .user-text {
-    font-size: 14px;
-    overflow-y: scroll;
-    height: 100%;
-  }
-
-  textarea:focus {
-    outline-width: thin;
-  }
 }

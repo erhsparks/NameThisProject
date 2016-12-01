@@ -1,0 +1,27 @@
+.counter-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin: 0px 5px;
+    display: inline-block;
+    vertical-align: middle;
+
+    .goal {
+      background: white;
+      width: 5em;
+      height: 1em;
+      text-align: center;
+      color: slateblue;
+      font-size: inherit;
+      border-radius: 5px;
+      vertical-align: middle;
+      padding: 2px 0px;
+    }
+  }
+}
