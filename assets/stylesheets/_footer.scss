@@ -1,7 +1,26 @@
 @import 'bar';
 
 $padding: 10px;
+$highlight-color: #FD9C52;
 
 footer {
   @include bar ($padding);
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 55%;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $highlight-color;
+    }
+  }
 }
