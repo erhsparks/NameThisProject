@@ -134,5 +134,5 @@ While super fun and motivating (I whipped this up on a whim but now find myself 
 - Expand the above to a simple rich-text editing toolbar.
 - Add ability to export text to file.
 - Add more skins!
-- Add a congratulations message when user reaches 100% (and maybe an encouraging "you're halfway there!" message at 50%)
-  - I considered flashing the progress bars but wasn't sure if there was an epilepsy concern there, and certainly wouldn't want to hurt any users!
+- Add some sort of acknowledgement (maybe a congratulations message?) as user passes 50% and 100%, although as mentioned above, it might be distracting and break the flow of writing.
+  - I did consider flashing the progress bars but wasn't sure if there was an epilepsy concern there, and certainly wouldn't want to hurt any users!
