@@ -8,7 +8,16 @@ A productivity app that helps you reach your word count goals with positive visu
 
 ### The App
 
+When a user first encounters the app, the!
 
+
+![image of welcome screen](assets/images/01_welcome.png)
+![image of invalid goal entry](assets/images/02_invalid_goal.png)
+![image of valid goal entry](assets/images/03_valid_goal.png)
+![image of beginning to type](assets/images/04_beginning_to_type.png)
+![image of more typing](assets/images/05_more_typing.png)
+![image of continuing to type past 100%](assets/images/06_continuing_past_100.png)
+![image of scrolling](assets/images/07_scroll.png)
 
 ### Implementation
 
@@ -45,7 +54,9 @@ const watchTextBox = counts => {
 
 The rest of the event listener in the above calls functions found in [update_display.js][update_display], which handle updating the DOM in response to word count or word count goal changes.
 
-Similarly to the text box, the word count goal has an event listener found in [goal_box.js][goal_box_listener]. This is slightly more complicated because it calls functions which prevent the user from inputting invalid goals -- input only appears in the box if it consists of only integers. This is handled by some tidy regex which requires zero or more numerical digits `\d*` (so that 0001 is allowed), followed by one of the numbers 1 through 9 `[1-9]` and then as many other numbers 0 through 9 as desired `\d*`:
+Similarly to the text box, the word count goal has an event listener found in [goal_box.js][goal_box_listener]. This is slightly more complicated because it calls functions which prevent the user from inputting invalid goals -- texteditor input is disabled with a helpful message as to why, and word count goal input only appears in its box if user input consists of only integers greater than zero.
+
+The input checking is handled by some tidy regex which requires zero or more numerical digits `\d*` (so that 0001 is allowed), followed by one of the numbers 1 through 9 `[1-9]` and then as many other numbers 0 through 9 as desired `\d*`:
 
 ```JavaScript
 // from lib/goal_box.js
