@@ -1,6 +1,6 @@
 ## Word Count World Builder
 
-[Check it out!][live]
+[Check it out here!][live]
 
 A productivity app that helps you reach your word count goals with positive visual feedback!
 
