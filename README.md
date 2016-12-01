@@ -94,7 +94,11 @@ In breaking my code up into readable, DRY pieces, I initially ran into the probl
 
 ### Future Directions
 
+While super fun and motivating (I whipped this up on a whim but now find myself actually wanting something to have to type so that I can use it more -- where was this while I was in high school???), it's pretty lightweight. Here are some ideas for future improvements!
+
 - Add ability to change font size for accessibility purposes.
 - Expand the above to a simple rich-text editing toolbar.
 - Add ability to export text to file.
 - Add more skins!
+- Add a congratulations message when user reaches 100% (and maybe an encouraging "you're halfway there!" message at 50%)
+  - I considered flashing the progress bars but wasn't sure if there was an epilepsy concern there, and certainly wouldn't want to hurt any users!
