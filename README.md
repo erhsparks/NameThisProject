@@ -20,7 +20,13 @@ Once a valid entry is detected, such as `10` in the example below, the prompt ch
 
 ![image of valid goal entry](assets/images/03_valid_goal.png)
 
-![image of beginning to type](assets/images/04_beginning_to_type.png)
+Progress bars appear as users begin to type!
+
+![image of beginning to type](assets/images/04a_beginning_to_type.png)
+
+And grow as they continue writing!
+
+![image of continuing to type](assets/images/04b_continuing_to_type.png)
 
 I made the decision to have one progress bar fill in upwards while the other fills downwards so that it is very obvious when you're halfway done typing. This means that a user has positive visual feedback in their peripheral vision, but no concentration-breaking messages have to appear to break the flow of writing.
 
