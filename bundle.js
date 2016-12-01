@@ -10378,9 +10378,41 @@
 	  var $goalBox = (0, _jquery2.default)('.goal');
 	
 	  $goalBox.on('input', function (e) {
-	    counts.goal = $goalBox.val();
+	    checkValidity($goalBox, counts);
 	    (0, _update_display.updatePercentage)(counts.numWords, counts.goal);
 	  });
+	};
+	
+	var checkValidity = function checkValidity($goalBox, counts) {
+	  var entry = $goalBox.val();
+	  var $textBox = (0, _jquery2.default)('.user-text')[0];
+	
+	  if (entry.match(/^\d*[1-9]\d*$/g)) {
+	    $goalBox.val(parseInt(entry));
+	    counts.goal = entry;
+	    enableTextBox($textBox);
+	  } else if (entry === '') {
+	    $goalBox.val('');
+	    disableTextBox($textBox, 'empty');
+	  } else {
+	    $goalBox.val('');
+	    disableTextBox($textBox, 'invalid');
+	  }
+	};
+	
+	var enableTextBox = function enableTextBox($textBox) {
+	  $textBox.disabled = false;
+	  $textBox.placeholder = 'Start typing!';
+	};
+	
+	var disableTextBox = function disableTextBox($textBox, reason) {
+	  var reasons = {
+	    empty: 'Enter a word count goal in the box above...',
+	    invalid: 'Enter a single whole number greater than 0...'
+	  };
+	
+	  $textBox.disabled = true;
+	  $textBox.placeholder = reasons[reason];
 	};
 	
 	exports.default = watchGoalBox;
@@ -10412,17 +10444,14 @@
 	  if (!goal) goal = 0;
 	
 	  var rawPercentage = numWords / goal * 100;
-	  // I think I'm going to want ^^this^^ later
-	
 	  var percentage = Math.floor(rawPercentage);
 	  if (!percentage) percentage = 0;
 	
 	  var $percentageCount = (0, _jquery2.default)('.percentage-count')[0];
 	  $percentageCount.textContent = percentage;
 	
-	  if (percentage >= 0 && percentage <= 100) {
-	    updateVisualProgress(percentage);
-	  }
+	  if (percentage > 100) percentage = 100;
+	  updateVisualProgress(percentage);
 	};
 	
 	var updateVisualProgress = function updateVisualProgress(percentage) {
