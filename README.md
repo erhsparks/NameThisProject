@@ -8,11 +8,11 @@ A productivity app that helps you reach your word count goals with positive visu
 
 ### The App
 
-When a user first encounters the app, the text box is disabled, with its default text displaying a prompt to enter the desired word count goal in the box labeled `GOAL`.
+When a user first encounters the app, the text box is disabled and its default text displays a prompt to enter the desired word count goal in the box labeled `GOAL`.
 
 ![image of welcome screen](assets/images/01_welcome.png)
 
-If a user types non-numbers or zero, the input is removed and the prompt changes to prompt users specifically for numbers.
+If a user types non-numbers or zero, that input is removed and the prompt changes to prompt users specifically for numbers.
 
 ![image of invalid goal entry](assets/images/02_invalid_goal.png)
 
@@ -22,7 +22,7 @@ Once a valid entry is detected, such as `10` in the example below, the prompt ch
 ![image of beginning to type](assets/images/04_beginning_to_type.png)
 ![image of more typing](assets/images/05_more_typing.png)
 
-There is not penalty for continuing past your word count goal, as I figured it would break a user's flow of concentration and they might stop typing. The word and percentage counters continues to increase, however, so that users with a hard limit may edit as desired.
+There is no penalty for continuing past your word count goal, as I figured it would break a user's flow of concentration and they might stop typing. The word and percentage counters continue to increase, however, so that users with a hard limit may edit as desired.
 
 ![image of continuing to type past 100%](assets/images/06_continuing_past_100.png)
 
@@ -32,9 +32,9 @@ Long documents are handled by CSS with a continuous vertical scroll: `overflow-y
 
 ### Implementation
 
-The app is very simple, and as such I did not use a JS framework to build out the page, simply wrote the elements I was going to need (the word count text `<input>`, the typing `<textarea>`, etc).
+The app is very simple, and as such I did not use a JS framework to build out the page, simply wrote the elements I was going to need (i.e. word count `<input type='text>`, the content `<textarea>`).
 
-I handled styling in CSS, using SASS for readability and flexibility, for instance in reuse of a `bar` mixin for for the headers and footer:
+Styling is handled with CSS, using SASS for readability and flexibility, such as in reuse of a `bar` mixin for for the headers and footer:
 
 ```CSS
 /* from assets/stylesheets/_header.scss */
@@ -45,7 +45,9 @@ I handled styling in CSS, using SASS for readability and flexibility, for instan
 }
 ```
 
-I used jQuery for DOM manipulation and JavaScript for the app logic itself. For example, word count is determined by matching the value of the textarea with class `.user-text` with a regular expression which looks for at least one non-whitespace character `\S*` with zero or more spaces to either side `\s+`. This is wrapped in an event listener for `input`, meaning any time keys are pressed or words are pasted/cut, which is obviously more robust than just listening for keypresses.
+DOM manipulation is handled with jQuery for the app logic itself uses pure JavaScript.
+
+In the example below, word count is determined by matching the value of the DOM element with class `.user-text` with a regular expression which looks for at least one non-whitespace character `\S+` with zero or more spaces to either side `\s*`. This is wrapped in an event listener for `input`, meaning any time keys are pressed or words are pasted/cut, which is obviously more robust than just listening for keypresses.
 
 ```JavaScript
 // from lib/text_box.js
