@@ -133,6 +133,6 @@ While super fun and motivating (I whipped this up on a whim but now find myself 
 - Add ability to change font size for accessibility purposes.
 - Expand the above to a simple rich-text editing toolbar.
 - Add ability to export text to file.
-- Add more skins!
+- Add more skins! Maybe an image that gets revealed as users type? It would be trivial to change the progress bars to opaque white and have them shrink away to reveal a background image, rather than growing.
 - Add some sort of acknowledgement (maybe a congratulations message?) as user passes 50% and 100%, although as mentioned above, it might be distracting and break the flow of writing.
   - I did consider flashing the progress bars but wasn't sure if there was an epilepsy concern there, and certainly wouldn't want to hurt any users!
