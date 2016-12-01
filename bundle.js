@@ -10411,11 +10411,23 @@
 	  if (!numWords) numWords = 0;
 	  if (!goal) goal = 0;
 	
-	  var percentage = Math.floor(numWords / goal * 100);
+	  var rawPercentage = numWords / goal * 100;
+	  // I think I'm going to want ^^this^^ later
+	
+	  var percentage = Math.floor(rawPercentage);
 	  if (!percentage) percentage = 0;
 	
 	  var $percentageCount = (0, _jquery2.default)('.percentage-count')[0];
 	  $percentageCount.textContent = percentage;
+	
+	  if (percentage >= 0 && percentage <= 100) {
+	    updateVisualProgress(percentage);
+	  }
+	};
+	
+	var updateVisualProgress = function updateVisualProgress(percentage) {
+	  var $progresses = (0, _jquery2.default)('.world');
+	  $progresses.height(percentage + '%');
 	};
 
 /***/ }

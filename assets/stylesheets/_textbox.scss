@@ -1,8 +1,9 @@
-$text-padding: 5px;
+$textbox-min-width: 80%;
+$textbox-max-width: 900px;
 
 .text-box {
-  width: 80%;
-  max-width: 900px;
+  min-width: $textbox-min-width;
+  max-width: $textbox-max-width;
   background: white;
   // color: rgb(119, 119, 119);
   box-shadow: rgb(187, 187, 187) 0px 3px 10px;
@@ -22,10 +23,10 @@ $text-padding: 5px;
   textarea {
     resize: none;
     border: 0;
-    padding: $text-padding;
+    padding: 5px;
   }
 
   textarea:focus {
-    outline-width: thin;
+    outline-width: medium;
   }
 }

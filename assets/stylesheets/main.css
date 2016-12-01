@@ -56,7 +56,7 @@ header {
       padding: 2px 0px; }
 
 .text-box {
-  width: 80%;
+  min-width: 80%;
   max-width: 900px;
   background: white;
   box-shadow: #bbbbbb 0px 3px 10px;
@@ -73,14 +73,28 @@ header {
     border: 0;
     padding: 5px; }
   .text-box textarea:focus {
-    outline-width: thin; }
+    outline-width: medium; }
 
 .background-world {
   background-color: whitesmoke;
   color: darkslategray;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  position: relative;
   height: 100%; }
+  .background-world .world {
+    width: 10%;
+    position: absolute;
+    opacity: .6; }
+  .background-world .left {
+    left: 0;
+    bottom: 0;
+    background-color: green; }
+  .background-world .right {
+    right: 0;
+    top: 0;
+    background-color: blue; }
 
 footer {
   background-color: teal;

@@ -1,7 +1,29 @@
+$col-width: 10%;
+
 .background-world {
   background-color: whitesmoke;
   color: darkslategray;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  position: relative;
   height: 100%;
+
+  .world {
+    width: $col-width;
+    position: absolute;
+    opacity: .6;
+  }
+
+  .left {
+    left: 0;
+    bottom: 0;
+    background-color: green;
+  }
+
+  .right {
+    right: 0;
+    top: 0;
+    background-color: blue;
+  }
 }
