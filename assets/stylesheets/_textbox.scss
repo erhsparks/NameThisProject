@@ -3,6 +3,7 @@ $textbox-max-width: 900px;
 
 .text-box {
   min-width: $textbox-min-width;
+  width: $textbox-min-width;
   max-width: $textbox-max-width;
   background: white;
   box-shadow: rgb(187, 187, 187) 0px 3px 10px;
@@ -14,8 +15,11 @@ $textbox-max-width: 900px;
   }
 
   .user-text {
+    flex: 1;
     font-size: 14px;
     overflow-y: scroll;
+    //dirty fix for safari/mobile issues -- page max height is 950px, see main.scss
+    min-height: 700px;
     height: 100%;
   }
 

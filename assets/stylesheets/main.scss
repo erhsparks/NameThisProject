@@ -11,4 +11,9 @@ body {
   justify-content: space-between;
 
   font-weight: 200;
+  min-width: 600px;
+  min-height: 950px;
+  // so that you can scroll down and have a larger page to work with
+  // exact height should be sourced from multiple beta users' impressions
+  // on diff screensizes/browers/etc.
 }

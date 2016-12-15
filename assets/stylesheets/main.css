@@ -69,6 +69,7 @@ html, body {
 
 .text-box {
   min-width: 80%;
+  width: 80%;
   max-width: 900px;
   background: white;
   box-shadow: #bbbbbb 0px 3px 10px;
@@ -77,8 +78,10 @@ html, body {
   .text-box header {
     font-size: 20px; }
   .text-box .user-text {
+    flex: 1;
     font-size: 14px;
     overflow-y: scroll;
+    min-height: 700px;
     height: 100%; }
   .text-box textarea {
     resize: none;
@@ -131,6 +134,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-weight: 200; }
+  font-weight: 200;
+  min-width: 600px;
+  min-height: 950px; }
 
 /*# sourceMappingURL=main.css.map */
